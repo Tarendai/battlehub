@@ -1,5 +1,4 @@
-##################################
-AFLobby Readme
+# AFLobby Readme
 
 Welcome to AFlobby, a Java based, cross-platform lobby client for the Spring RTS engine project on Windows Mac and Linux operating systems. The current aims for project are to liberate users from the hell that is TASClient,whil moving in a multi-platform context as Spring increasingly extends support to other platforms.
 
@@ -11,8 +10,7 @@ Spring 0.74b3+ (Required to use multi-player)
 
 Beta 1 final will have an installer under windows. Linux users wont have an installer unless aflobby is included as part of  spring package.
 
-##################################
-Linux installation and running~~ (Assumes you downloaded the Linux version of AFLobby)
+# Linux installation and running~~ (Assumes you downloaded the Linux version of AFLobby)
 
 This guide assumes that the SpringRTS engine, and a selection of mods and maps are installed, so please refer to this wiki page for more information regarding spring installation:
 http://spring.clan-sy.com/wiki/SetupGuide
@@ -21,7 +19,7 @@ The Linux version comes with two packages; package1.zip contains  images, sounds
 
 1. Create an ".aflobby" directory in your Home folder: mkdir -p ~/.aflobby
 
-2. Extract the package1.zip folders to ~/.aflobby so your .aflobby folder has “images”, “sounds”, and “minimaps” folders.
+2. Extract the package1.zip folders to ~/.aflobby so your .aflobby folder has ï¿½imagesï¿½, ï¿½soundsï¿½, and ï¿½minimapsï¿½ folders.
 
 3. Extract the files and folders from package2.zip, then cut and paste to:
        /usr/share/games/spring
@@ -34,8 +32,7 @@ bash aflobby.sh
 
 5. Login and play spring
 
-##################################
-Windows installation and running~~ (Assumes you downloaded the Windows version of AFLobby)
+# Windows installation and running~~ (Assumes you downloaded the Windows version of AFLobby)
 
 This guide assumes that the Spring RTS engine is installed and in the default directory. Please download and install the regular installer from the official Spring RTS download page if you have not already: http://spring.clan-sy.com/download.php
 
