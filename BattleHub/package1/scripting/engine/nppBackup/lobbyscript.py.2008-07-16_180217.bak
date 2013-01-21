@@ -1,0 +1,53 @@
+#import lobbyscript
+
+def Callback:
+	def __init__(self):
+		self.api = lobbyscript.Callback()
+	
+	def ExitLobby(self): # exits the lobby
+		self.api.ExitLobby()
+	
+	def ShowDebugWindow(self): # displays the python debug window; basically the stdout of the python interpreter
+		self.api.ShowDebugWindow()
+	
+	def LoadScripts(self): # calls the handler's _load() function
+		self.api.LoadScripts()
+	
+	def ReloadScripts(self): # calls the handler's _reloadall() function
+		self.api.ReloadModules()
+	
+	def ReloadScript(self, script): # calls the handler's _reload(s) function with script as the parameter
+		self.api.ReloadScript(script)
+	
+	def SocketConnect(self, host, port): # connects the lobby's socket to host, port but doesn't perform login actions
+		self.api.SocketConnect(host, port)
+	
+	def Disconnect(self): # disconnects the lobby's socket
+		self.api.Disconnect()
+	
+	def PerformConnected(self): # pretends we are connected to a server regardless of whether we are. used for simulating a server with scripting
+		self.api.PerformConnected()
+	
+	def PerformDisconnected(self): # reverses whatever state of being connected we are in
+		self.api.PerformDisconnected()
+	
+	def SendProtocol(self, data): # sends raw protocol to the server
+		self.api.SendProtocol(data)
+	
+	def HandleProtocol(self, data): # handles raw protocol as if from the server
+		self.api.HandleProtocol(data)
+	
+	def GetBattles(self): # returns a dict of all battles and attributes
+		return self.api.GetBattles()
+	
+	def GetMaps(self): # returns a dict of all maps and attributes
+		return self.api.GetMaps()
+	
+	def GetMods(self): # returns a dict of all mods and attributes
+		return self.api.GetMods()
+	
+	def GetMyUser(self): # returns a dict of your user's attributes
+		return self.api.GetMyUser()
+	
+	def GetUsers(self): # returns a dict of all users and attributes
+		return self.api.GetUsers()

@@ -1,0 +1,80 @@
+#import lobbyscript
+import battlehubconduit
+
+from org.darkstars.battlehub.framework import CEvent
+from org.darkstars.battlehub.framework import CEventTypes
+from org.darkstars.battlehub.framework import IModule
+
+def Callback:
+	def __init__(self):
+		self.bhapi = getBattleHubReturnObject()()
+	
+	def ExitLobby(self): # exits the lobby
+		self.bhapi.ShutDown()
+		return
+	
+	def ShowDebugWindow(self): # displays the python debug window; basically the stdout of the python interpreter
+		self.bhapi.ShowDebugWindow()
+		e = CEvent("TOGGLETRAFFIC")
+        self.lobbyModule.FireGUIEvent(e)
+		return
+	
+	def LoadScripts(self): # calls the handler's _load() function
+		_load()
+		#self.bhapi.LoadScripts()
+		return
+	
+	def ReloadScripts(self): # calls the handler's _reloadall() function
+		_reloadall()
+		#self.bhapi.ReloadModules()
+		return
+	
+	def ReloadScript(self, script): # calls the handler's _reload(s) function with script as the parameter
+		_reload(s)
+		#self.bhapi.ReloadScript(script)
+		return
+	
+	def SocketConnect(self, host, port): # connects the lobby's socket to host, port but doesn't perform login actions
+		#self.bhapi.SocketConnect(host, port)
+		return
+	
+	def Disconnect(self): # disconnects the lobby's socket
+		#self.bhapi.Disconnect()
+		return
+	
+	def PerformConnected(self): # pretends we are connected to a server regardless of whether we are. used for simulating a server with scripting
+		#self.bhapi.PerformConnected()
+		return
+	
+	def PerformDisconnected(self): # reverses whatever state of being connected we are in
+		#self.bhapi.PerformDisconnected()
+		return
+	
+	def SendProtocol(self, data): # sends raw protocol to the server
+		self.lobbyModule.SendTraffic(data)
+		return
+	
+	def HandleProtocol(self, data): # handles raw protocol as if from the server
+		e = CEvent(data)
+		self.bhapi.FireEvent(e)
+		return
+	
+	def GetBattles(self): # returns a dict of all battles and attributes
+		#return self.bhapi.GetBattles()
+		return
+	
+	def GetMaps(self): # returns a dict of all maps and attributes
+		#return self.bhapi.GetMaps()
+		return
+	
+	def GetMods(self): # returns a dict of all mods and attributes
+		#return self.bhapi.GetMods()
+		return
+	
+	def GetMyUser(self): # returns a dict of your user's attributes
+		#return self.bhapi.GetMyUser()
+		return
+	
+	def GetUsers(self): # returns a dict of all users and attributes
+		#return self.bhapi.GetUsers()
+		return
